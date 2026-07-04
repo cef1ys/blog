@@ -20,8 +20,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Nix
         uses: cachix/install-nix-action@v30
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build site with Zola
-        run: nix develop --command zola build
+        run: |
+          nix build .#
+          cp -rL result public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -12,6 +12,18 @@
         pkgs = import nixpkgs { inherit system; };
       in
       {
+        packages.default = pkgs.stdenv.mkDerivation {
+          name = "blog";
+          src = self;
+          buildInputs = with pkgs; [ zola ];
+          buildPhase = ''
+            zola build
+          '';
+          installPhase = ''
+            cp -r public $out
+          '';
+        };
+
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             zola
