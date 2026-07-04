@@ -196,6 +196,29 @@ header nav ul li a:hover {
   background: #357abd;
 }
 
+/* RSS Link */
+.rss-link {
+  color: #f60;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+.rss-link:hover {
+  text-decoration: underline;
+}
+
+/* Comments section */
+.comments {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.comments h2 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
 /* Footer */
 footer {
   margin-top: 50px;

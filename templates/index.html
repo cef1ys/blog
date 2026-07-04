@@ -13,6 +13,7 @@
   <h2>Recent Posts</h2>
   {% set section = get_section(path="_index.md") %}
   {% for page in section.pages %}
+  {% if page.path != "/about/" %}
   <article class="post-preview">
     <h3><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h3>
     <time datetime="{{ page.date }}">{{ page.date }}</time>
@@ -27,6 +28,7 @@
       {% endif %}
     </p>
   </article>
+  {% endif %}
   {% endfor %}
 </section>
 {% endblock content %}

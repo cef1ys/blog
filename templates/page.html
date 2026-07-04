@@ -2,6 +2,18 @@
 
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
 
+{% block seo %}
+<meta name="description" content="{{ page.description | default(value=config.description) }}">
+<meta property="og:title" content="{{ page.title }} - {{ config.title }}">
+<meta property="og:description" content="{{ page.description | default(value=config.description) }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ page.permalink | safe }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title }} - {{ config.title }}">
+<meta name="twitter:description" content="{{ page.description | default(value=config.description) }}">
+<link rel="canonical" href="{{ page.permalink | safe }}">
+{% endblock seo %}
+
 {% block content %}
 <article class="post-full">
   <h1>{{ page.title }}</h1>
@@ -17,4 +29,15 @@
     {{ page.content | safe }}
   </div>
 </article>
+
+<div class="comments">
+  <h2>Comments</h2>
+  <script src="https://utteranc.es/client.js"
+          repo="cef1ys/blog"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
 {% endblock content %}
