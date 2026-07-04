@@ -1,0 +1,26 @@
+# Zola configuration file
+base_url = "https://cef1ys.github.io/blog"
+title = "Choi Min Seok"
+description = "Personal blog about open source, programming, and everything in between"
+default_language = "ko"
+
+# The path to the theme directory (comment out if not using a theme)
+# theme = "my-theme"
+
+# Whether to compile the Sass assets
+compile_sass = false
+
+# Whether to build the RSS feed
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+# Taxonomies
+taxonomies = [
+  { name = "tags", paginate_by = 10 },
+  { name = "categories", paginate_by = 10 },
+]
+
+# Extra data
+[extra]
+github_username = "cef1ys"
+email = "cef1ys-gh@yahoo.com"

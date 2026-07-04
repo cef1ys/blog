@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value="ko") }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
+  {% if config.generate_feed %}
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}">
+  {% endif %}
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ config.base_url | safe }}">{{ config.title }}</a>
+      <ul>
+        <li><a href="{{ get_url(path="/") | safe }}">Home</a></li>
+        <li><a href="{{ get_url(path="/tags") | safe }}">Tags</a></li>
+        <li><a href="{{ get_url(path="/categories") | safe }}">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+  <footer>
+    <p>&copy; 2026 {{ config.title }}</p>
+  </footer>
+</body>
+</html>
