@@ -16,8 +16,8 @@ feed_filenames = ["atom.xml"]
 
 # Taxonomies
 taxonomies = [
-  { name = "tags", paginate_by = 10 },
-  { name = "categories", paginate_by = 10 },
+    { name = "tags", feed = true },
+    { name = "categories", feed = true },
 ]
 
 # Extra data

@@ -2,7 +2,10 @@
 title = "블로그 시작"
 date = 2026-07-04
 description = "드디어 개인 블로그를 열었습니다. 앞으로 오픈소스와 개발 이야기를 나눠볼 예정입니다."
+
+[taxonomies]
 tags = ["일상", "시작"]
+categories = ["블로그"]
 +++
 
 드디어 개인 블로그를 열었습니다. GitHub Pages + Zola 조합으로 만들어졌고, Nix Flake로 개발 환경을 관리하고 있습니다.
