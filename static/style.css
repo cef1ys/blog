@@ -150,6 +150,52 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Cookie Consent Banner */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  padding: 16px 24px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  z-index: 1000;
+  flex-wrap: wrap;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+}
+
+.cookie-consent.visible {
+  display: flex;
+}
+
+.cookie-consent p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  flex: 1;
+  min-width: 200px;
+}
+
+.cookie-btn {
+  background: #4a90d9;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.cookie-btn:hover {
+  background: #357abd;
+}
+
 /* Footer */
 footer {
   margin-top: 50px;
