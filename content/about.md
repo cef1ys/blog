@@ -26,7 +26,7 @@ description = "최민석 (Choi Min Seok) - 컴퓨터 공학 전공, 오픈소스
 ### 연락처
 
 - **GitHub**: [github.com/cef1ys](https://github.com/cef1ys)
-- **Email**: cef1ys-gh@yahoo.com
+- **Email**: cef1ys0712@astermail.org
 
 ---
 
